@@ -20,3 +20,13 @@ test('Locators', async ({page}) => {
         await dialog.accept();
     })
 })
+test("Products", async ({page}) => {
+    await page.goto("https://www.demoblaze.com/#");
+    const products = await page.$$("#tbodyid") ;
+    // const productCount = await products.count();
+    // console.log("Total number of products: " + productCount);
+    for (const product of products){
+        const productName = await product.textContent();
+        console.log("Product Name: ",productName);
+    }
+})
