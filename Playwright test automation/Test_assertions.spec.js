@@ -12,3 +12,5 @@ test('Assertions', async ({page}) => {
     await page.getByRole("button",{name :"Register"}).click();
     await expect(page.getByText("Your registration completed")).toBeVisible();
 })
+//Hard assertion : If the assertion fails, the test will stop executing and be marked as failed.
+//Soft assertion : If the assertion fails, the test will continue executing and be marked as failed at the end of the test. 
