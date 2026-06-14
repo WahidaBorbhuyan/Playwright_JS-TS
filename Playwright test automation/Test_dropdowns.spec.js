@@ -21,7 +21,7 @@ test('Dropdown options',async ({page})  =>{
 test('Dropdown options array',async ({page})  =>{
     await page.goto("https://testautomationpractice.blogspot.com/");
     const countries = await page.$$("#country option")
-    countryLength = countries.length;
+    const countryLength = countries.length;
     await expect(countryLength).toBe(10);
     await page.waitForTimeout(2000);
 })
