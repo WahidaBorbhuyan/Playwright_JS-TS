@@ -14,3 +14,4 @@ test('Assertions', async ({page}) => {
 })
 //Hard assertion : If the assertion fails, the test will stop executing and be marked as failed.
 //Soft assertion : If the assertion fails, the test will continue executing and be marked as failed at the end of the test. 
+//await expect.soft(page.getByText("Your registration completed")).toBeVisible();
